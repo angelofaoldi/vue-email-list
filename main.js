@@ -26,4 +26,26 @@ function casualMail() {
 
 console.log(casualMail);
 
+// GENERARE 10 MAIL CASUALI
+
+const emailList = document.getElementById('email-list');
+// colleghiamo un elemento HTML al JS
+
+// con il ciclo for stabiliamo un numero di 10 emails
+for (let i = 0; i < 10; i++) {
+
+    // passiamo la funzione alla costante randomEmail
+    const randomEmail = casualMail();
+
+    // crea un list item nella <ul id="email-list">
+    const li = document.createElement('li');
+
+    // aggiungiamo in ogni <li> una mail random
+    li.textContent = randomEmail;
+    emailList.appendChild(li);
+}
+
+
+
+
 
